@@ -1,0 +1,131 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    color: #00ffff; /* Neon cyan default text */
+}
+
+/* ================= BODY BACKGROUND ================= */
+body {
+    background: radial-gradient(circle at center, #0d0d0d, #000000);
+    overflow-x: hidden;
+    animation: backgroundShift 30s linear infinite;
+}
+
+/* ================= HOLOGRAM CYBER ANIMATION ================= */
+@keyframes backgroundShift {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/* ================= HEADER ================= */
+header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    background: rgba(0, 255, 255, 0.05);
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    border-bottom: 1px solid #0ff;
+}
+
+/* ================= SECTION EVENT ================= */
+section.event {
+    margin: 40px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 1000px;
+    border: 1px solid #0ff;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 30px #0ff, 0 0 60px #0ff inset;
+    backdrop-filter: blur(8px);
+}
+
+/* ================= NEON CYBER TEXT ================= */
+.cyber-text {
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #00ffff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+    border-left: 4px solid #0ff;
+    animation: textGlow 2s infinite alternate;
+}
+
+/* ================= NEON BUTTON ================= */
+button.cyber-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #0ff;
+    background: transparent;
+    border: 2px solid #0ff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #0ff;
+    transition: 0.3s all ease-in-out;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+}
+
+button.cyber-btn:hover {
+    color: #ff00ff;
+    border-color: #ff00ff;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff inset;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+    transform: scale(1.05);
+}
+
+/* ================= SELECT DROPDOWN ================= */
+select {
+    margin: 20px auto;
+    display: block;
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: rgba(0,0,0,0.7);
+    color: #0ff;
+    border: 2px solid #0ff;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+}
+
+select:hover {
+    border-color: #ff00ff;
+    box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff inset;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    color: #00ffff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+/* ================= GLOW ANIMATION ================= */
+@keyframes textGlow {
+    0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; }
+    50% { text-shadow: 0 0 10px #0ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff; }
+    100% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff; }
+}
+
+/* ================= MEDIA QUERY ================= */
+@media screen and (max-width: 768px) {
+    .cyber-text {
+        font-size: 1rem;
+    }
+    button.cyber-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
